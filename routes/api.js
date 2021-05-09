@@ -8,7 +8,7 @@ var zahirr = db.get("zahirr");
 	console.log('')
 }
 
-var creatorList = ['@Kayla','@Kayz'];
+var creatorList = ['@Kayz','@Kayla'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
 
