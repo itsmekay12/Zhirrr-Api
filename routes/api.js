@@ -2815,7 +2815,7 @@ router.get('/cekapikey', async(req, res, next) => {
       apikey: `${apikey}`,
       message: 'APIKEY AKTIF BEB'
     })
-  } else {
+  .catch(e => {
     res.json(loghandler.error)
   }
 })
