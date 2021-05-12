@@ -2808,7 +2808,7 @@ router.get('/maker/special/epep', async (req, res, next) => {
 router.get('/cekapikey', async(req, res, next) => {
   const apikey = req.query.apikey;
   if(!apikey) return res.json(loghandler.notparam)
-  if(apikeyInput != 'kawaiapi, kaylacancik') return res.json(loghandler.invalidKey)
+  if(apikeyInput != 'kawaiapi') return res.json(loghandler.invalidKey)
     res.json({
       status: 'active',
       creator: `${creator}`,
