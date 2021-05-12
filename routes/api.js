@@ -2805,20 +2805,5 @@ router.get('/maker/special/epep', async (req, res, next) => {
 })
 })
 
-router.get('/cekapikey', async(req, res, next) => {
-  var apikeyInput = req.query.apikey;
-  if(!apikey) return res.json(loghandler.notparam)
-  if(apikeyInput != 'kawaiapi') return res.json(loghandler.invalidKey)
-    res.json({
-      status: 'active',
-      creator: `${creator}`,
-      apikey: `${apikey}`,
-      message: 'APIKEY AKTIF BEB'
-    })
-  .catch(e => {
-    res.json(loghandler.error)
-  }
-})
-
 
 module.exports = router
