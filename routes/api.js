@@ -3123,23 +3123,6 @@ router.get('/web2plain-text', async(req, res, next) => {
 });
 
 
-router.get('/cekapikey', async(req, res, next) => {
-  const apikey = req.query.apikey;
-  if(!apikey) return res.json(res.sendFile(invalidKey))
-  if(listkey.includes(apikey)) {
-    res.json({
-      status: 'active',
-      creator: `${creator}`,
-      apikey: `${apikey}`,
-      message: 'APIKEY ACTIVE'
-    })
-  } else {
-    res.json(loghandler.invalidKey)
-  }
-})
-
-router.use(function (req, res) {
-
     res.status(404)
     .set("Content-Type", "text/html")
     .sendFile(__path + '/views/404.html');
